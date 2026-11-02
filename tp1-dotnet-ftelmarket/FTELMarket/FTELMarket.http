@@ -1,0 +1,44 @@
+@FTELMarket_HostAddress = http://localhost:5082/api
+
+GET {{FTELMarket_HostAddress}}/categories
+Accept: application/json
+
+###
+
+GET {{FTELMarket_HostAddress}}/products
+Accept: application/json
+
+###
+
+GET {{FTELMarket_HostAddress}}/products/1
+Accept: application/json
+
+###
+
+POST {{FTELMarket_HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Elden Ring",
+  "description": "Édition de lancement.",
+  "price": 29.9,
+  "stock": 2,
+  "categoryId": 1
+}
+
+###
+
+PUT {{FTELMarket_HostAddress}}/products/1
+Content-Type: application/json
+
+{
+  "name": "The Last of Us Part II",
+  "description": "Boîte et notice, disque sans rayure.",
+  "price": 17.5,
+  "stock": 2,
+  "categoryId": 1
+}
+
+###
+
+DELETE {{FTELMarket_HostAddress}}/products/1
